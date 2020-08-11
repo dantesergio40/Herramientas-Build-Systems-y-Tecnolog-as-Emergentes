@@ -1,0 +1,39 @@
+<div class="img-catalogo-fondo ">
+  <div class="container">
+
+   <barra-superior></barra-superior>
+
+   <div class="container">
+    <div class="row">
+
+      <div class="card text-white bg-info " style="width: 100%;">
+
+        <form  (ngSubmit)="gotoBack()">
+          <button type="submit" class="close m-1" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+          </button>
+        </form>
+
+        <h1 class="card-title m-3"></h1>  
+   
+        <div class="row no-gutters" *ngFor="let item of product">
+          <div class="col-md-4">
+              <img style="max-width: 36rem;" src="{{item.foto}}" class="card-img m-3" alt="...">
+          </div>
+          <div class="col-md-8 ">
+            <div class="card-body m-3">
+               <h1 class="card-title">{{item.nombre}}</h1>  
+               <h2><p class="card-text">Precio$: {{item.precio}}</p></h2>
+               <h4><p class="card-text">Unidades disponibles: {{item.cantidad}}</p></h4>
+            </div>
+          </div>
+        </div>
+           
+        <form class="m-3" (ngSubmit)="gotoBack()">     
+           <button  class="btn btn-secondary" type="submit">Atras</button>
+        </form>
+     </div>
+   </div> 
+  </div>
+ </div> 
+</div>

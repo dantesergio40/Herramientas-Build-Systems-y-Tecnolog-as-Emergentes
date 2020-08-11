@@ -1,0 +1,22 @@
+.img-catalogo-fondo{
+    background-image: url('/assets/main-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: scroll;
+    min-height: 100vh; 
+
+  }
+
+img {
+    
+    max-height: 40px;
+    min-height: 40px;
+}
+
+.cancelar{
+  margin-right: 20px;
+}
+.margin{
+  margin-bottom: 40px;
+}

@@ -1,0 +1,53 @@
+input.ng-touched.ng-invalid{
+    border: 6px  red;
+    border-style: inset;
+}
+
+.error{
+    color: yellow;
+    font-size: 20px;
+}
+
+.img-login-fondo{
+  background-image: url('/assets/login-fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;   
+}
+
+h1{
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+  font-size: 60px;
+
+}
+h4{   
+    margin-bottom: 0px;  
+        
+}
+
+.register{
+    margin-left: 237px;
+}
+
+.label{
+  color: white;
+  font-size: 30px;
+}
+
+p{
+    font-size: 22px;
+}
+a{
+    color: #0000DF;        
+    font-family: impact;    
+    letter-spacing: 0;
+    text-shadow: -1px -1px 1px #f5f8f4, 1px -1px 1px #f5f8f4, -1px 1px 1px #f5f8f4, 1px 1px 1px #f5f8f4;
+      
+  }
+  .text{
+    color: #efff11;
+    text-shadow:-1px -1px 1px #343832;
+  }

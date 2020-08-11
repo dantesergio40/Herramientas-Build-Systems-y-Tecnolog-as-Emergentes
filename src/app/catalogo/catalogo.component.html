@@ -1,0 +1,35 @@
+
+
+<div class="container bg-danger" style="margin-bottom: 40px;">  
+  
+  <div class="row text-white">
+    <div class="col-sm-6 mt-4">
+       <h2>Catálogo de productos</h2>   
+    </div> 
+    <div class="col-sm-6 mt-4">   
+      <form  class=" float-right " action="" method="get">
+         <label  for="buscar" style="margin-left: 300px;">¿Qué estás buscando?</label>
+         <input class="mr-sm-2 searchbox-input" style="margin-left: 300px;" type="search" name="filtro" id="buscar" [(ngModel)]="filtro" placeholder="Buscar producto">
+      </form>
+    </div> 
+  </div> 
+  <hr>
+   
+ <div class="row">
+  <div class="col-sm-3" *ngFor="let item of productList | buscador : 'nombre' : filtro "> 
+    <div class="card mb-3" style="width: 100%;">
+      <img src="{{item.foto}}" class="card-img-top" alt="...">
+      <div class="card-body">      
+        <h4 class="card-title">{{item.nombre}}</h4>
+        <p class="card-text">Precio$: {{item.precio}} </p>
+        <p class="card-text">Unidades disponibles$: {{item.cantidad}}</p>        
+        <a [routerLink]="['ver-mas', item.$key]" class="vermas btn btn-primary btn-sm">Ver Mas</a>
+        <a (click)="addProductCarrito(item, unidadesPedidas.value)" class="añadir btn btn-warning text-white btn-sm">Añadir</a>
+        <input class="text-center" style="width: 3rem;" type="number" name="" #unidadesPedidas  value="1">      
+      </div>
+    </div>
+  </div>
+ </div>
+
+</div>
+

@@ -1,0 +1,53 @@
+<div class="img-catalogo-fondo ">
+  <div class="container">
+
+    <barra-superior></barra-superior>
+
+    <div class="container bg-warning"> 
+
+       <form  (ngSubmit)="gotoAtras()">
+         <button type="submit" class="close" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </form>
+ 
+      <div class="row margin bg-warning ">
+        <div class="col-sm-12 text-white ">
+           <h1 class="mt-3 mb-3">Carrito de mis compras</h1>
+        </div>
+        <div class="col-sm-6">
+           <ul class="list-group">
+             <li class="list-group-item border border-primary" *ngFor="let carrito of productsCarrito">
+                <div class="media" style="max-width: 250px;">
+                   <img src="{{carrito.product.foto}}" class="align-self-center mr-3" alt="...">
+                   <div class="media-body">
+                     <h5 class="mt-0">{{carrito.product.nombre}}</h5>
+                     <p>Querés: {{carrito.cantidad}} unidades</p>
+                     <p class="card-text"><small class="text-muted">Subtotal: $ {{carrito.subtotal}}</small></p>
+                     <p class="card-text"><small class="text-muted">Quedan:  {{carrito.quedan}} productos</small></p>             
+                  </div>              
+               </div>
+             </li>      
+           </ul>
+       </div>
+       <div class="col-sm-6">
+          <div class="col-sm-12">
+              <h1>Total:$ {{data.compraTotal}}</h1>
+          </div>
+          <div class="col-sm-12">
+              <button class="cancelar btn btn-danger" type="button" name="button" (click)='onCancelar()' >Cancelar</button>
+              <button class="btn btn-success" type="button" name="button" (click)='onActualizar(productsCarrito)'>Pagar</button>
+          </div>
+       </div>
+       <div class="col-sm-12">
+          <form (ngSubmit)="gotoAtras()">          
+             <button  class="btn btn-secondary mt-3 mb-3" type="submit" >Atras</button>
+          </form>
+       </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

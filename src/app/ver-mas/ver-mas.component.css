@@ -1,0 +1,8 @@
+.img-catalogo-fondo{
+    background-image: url('/assets/main-fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;  
+
+  }

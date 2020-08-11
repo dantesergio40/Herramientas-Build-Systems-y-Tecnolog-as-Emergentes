@@ -1,0 +1,17 @@
+<nav class="navbar navbar-dark bg-dark mb-4">
+
+    <a class="navbar-link text-white">TiendaOnline</a>   
+    <ul class="nav" *ngIf="user$ | async as user">
+        <p class= "text-white mt-2" >{{user.email}}</p>       
+        <li class="nav-item">
+          <a class="nav-link text-white bg-dark" ><i class="fas fa-home"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white bg-dark" type="submit" [routerLink]="['carrito']"><i class="fas fa-shopping-cart"><span id="badge" class="badge badge-primary badge-pill"></span></i></a>
+        </li>      
+        <li class="nav-item">
+          <a class="nav-link text-white bg-dark"  (click)="onLogout()"><i class="fas fa-running"></i></a>
+        </li>        
+    </ul>  
+
+</nav>
